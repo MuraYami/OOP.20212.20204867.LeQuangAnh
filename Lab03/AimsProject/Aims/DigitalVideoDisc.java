@@ -1,15 +1,22 @@
+
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
     private String director;
     private int length;
-    private double cost;
+    private float cost;
     
-    public DigitalVideoDisc() {
-
+    public DigitalVideoDisc(String title , String category, String director, int length,float cost ) {
+            super();
+            this.title = title;
+            this.category = category;
+            this.director = director;
+            this.length = length;
+            this.cost = cost;
     }
 
-#getter
+///getter
     public String getTitle() {
         return title;
     }
@@ -26,7 +33,7 @@ public class DigitalVideoDisc {
         return cost;
     }
 
-#setter
+///setter
     public void setTitle(String title) {
         this.title = title;
     }
@@ -43,3 +50,5 @@ public class DigitalVideoDisc {
         this.cost = cost;        
     }
 }
+
+
