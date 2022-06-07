@@ -1,14 +1,14 @@
 package hust.soict.dsai.aims.test.utils;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.utils.DVDUtils;
 
 public class DVDtest {
     public static void main(String[] args) {
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("AAAA", "aaaa","aaaa", 1, 5.6f );
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("BBBB", "bbbb","bbbb", 2, 5.3f );
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("CCCC", "aaaa","aaaa", 3, 5f );
-        DigitalVideoDisc dvd4 = new DigitalVideoDisc("DDDD", "aaaa","aaaa", 4, 7.1f );
-        DigitalVideoDisc dvd5 = new DigitalVideoDisc("EEEE", "aaaa","aaaa", 5, 3.3f );
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc(1,"AAAA", "aaaa","aaaa", 1, 5.6f );
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc(2, "BBBB", "bbbb","bbbb", 2, 5.3f );
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc(3, "CCCC", "aaaa","aaaa", 3, 5f );
+        DigitalVideoDisc dvd4 = new DigitalVideoDisc(4, "DDDD", "aaaa","aaaa", 4, 7.1f );
+        DigitalVideoDisc dvd5 = new DigitalVideoDisc(5, "EEEE", "aaaa","aaaa", 5, 3.3f );
 
 
         System.out.println(DVDUtils.compareByCost(dvd1, dvd2));
