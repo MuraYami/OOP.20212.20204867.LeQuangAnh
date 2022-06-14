@@ -21,12 +21,12 @@ public class CompactDisc extends Disc implements Playable{
 	public void addTrack(Track track) {
 		for (int i = 0; i < nbTracks; i++) {
 			if (tracks[i] == track) {
+				System.out.println("The track was existed");
 				break;
 			}
 			tracks[nbTracks] = track;
 			nbTracks += 1;
 		}
-		
 	}
 	public void removeTrack(String title) {
 		for (int i = 0; i < nbTracks; i++) {
@@ -49,7 +49,7 @@ public class CompactDisc extends Disc implements Playable{
 	
 	public void play() {
     	System.out.println("Playing CDs: " + this.getTitle());
-    	System.out.println("DVD length: " + this.getLength());
+    	System.out.println("CDs length: " + this.getLength());
     	for (int i = 0; i < nbTracks ; i++) {
     		tracks[i].play();
     	}
