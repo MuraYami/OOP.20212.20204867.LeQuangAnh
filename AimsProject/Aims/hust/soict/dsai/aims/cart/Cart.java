@@ -2,8 +2,6 @@ package hust.soict.dsai.aims.cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
 import java.util.ArrayList;
-import java.util.Random;
-
 
 public class Cart {
 
@@ -53,5 +51,9 @@ public class Cart {
     
     public Media getALuckyItem() {    
     		return itemsOdered.get((int) (Math.random() * qtyOrdered ));
+    }
+    
+    public  ArrayList<Media> sort() {                
+        return itemsOdered;
     }
 }

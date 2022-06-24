@@ -1,6 +1,8 @@
 package hust.soict.dsai.aims.media;
 
-public abstract class Media {
+import java.util.Comparator;
+
+public abstract class Media implements Comparable<Media>{
 	
 	protected int id;
 	protected String title;
@@ -18,6 +20,27 @@ public abstract class Media {
 	}
 	
 	public void display() {}
+	
+	public boolean equals(Media media) {
+		if (this.id == media.id ) {
+			return true;
+		} else {
+			return false;}
+	}
+	
+	public int compareTo(Media media) {
+		if (this.title.compareTo(media.title) == 0) {
+			return this.category.compareTo(media.category);
+		} else {
+			return this.title.compareTo(media.title);
+		}
+	}
+	
+	public static final Comparator<Media> COMPARE_BY_TITLE_COST = 
+			Comparator.comparing(Media::getTitle).thenComparing(Media::getCost);
+	
+	public static final Comparator<Media> COMPARE_BY_COST_TITLE = 
+			Comparator.comparing(Media::getCost).thenComparing(Media::getTitle);
 
 	public int getId() {
 		return id;
@@ -61,6 +84,4 @@ public abstract class Media {
 	
 }
 
-interface Playable{
-	public void play();
-}
+

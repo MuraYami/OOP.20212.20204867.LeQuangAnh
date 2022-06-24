@@ -1,6 +1,7 @@
 package hust.soict.dsai.aims.test.cart;
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.screen.manager.*;
 
 public class CartTest {
     public static void main(String[] args) {
@@ -22,8 +23,11 @@ public class CartTest {
         
         //Test the print(display) method
         cart.display();
+        new MediaStore(dvd3);
         
         //To-do: TEst the search methods here
+        
+        
     }
     
 }
